@@ -99,8 +99,18 @@ namespace TechJobsConsole
                     Console.WriteLine(j + " - " + choices[choiceKeys[j]]);
                 }
 
-                string input = Console.ReadLine();
-                choiceIdx = int.Parse(input);
+                
+
+                if (!int.TryParse(Console.ReadLine(), out choiceIdx))
+                {
+                    Console.WriteLine("Invalid entry");
+                }
+                    
+                    
+
+                                
+                
+                
 
                 if (choiceIdx < 0 || choiceIdx >= choiceKeys.Length)
                 {
